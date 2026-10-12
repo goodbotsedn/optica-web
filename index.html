@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óptica Visión - Estilo, Salud y Tecnología Visual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #f8fafc; color: #1e293b; line-height: 1.6; }
+        
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 8%; background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #0284c7; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: #334155; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: #0284c7; }
+        .btn-cita { background: #0284c7; color: white !important; padding: 0.6rem 1.2rem; border-radius: 25px; font-weight: 600; }
+        .btn-cita:hover { background: #0369a1; }
+
+        /* Hero Section */
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 5rem 8%; background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 100%); min-height: 80vh; }
+        .hero-content { max-width: 550px; }
+        .hero-content h1 { font-size: 2.8rem; font-weight: 700; color: #0f172a; margin-bottom: 1rem; line-height: 1.2; }
+        .hero-content p { font-size: 1.1rem; color: #475569; margin-bottom: 2rem; }
+        .hero-btns { display: flex; gap: 1rem; }
+        .btn-primary { background: #0284c7; color: white; padding: 0.8rem 1.8rem; border-radius: 8px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3); }
+        .btn-secondary { background: #ffffff; color: #0284c7; padding: 0.8rem 1.8rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 1px solid #cbd5e1; }
+
+        /* Services Section */
+        .services { padding: 5rem 8%; text-align: center; }
+        .section-title { font-size: 2rem; color: #0f172a; margin-bottom: 2.5rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .service-card { background: white; padding: 2.5rem 1.5rem; border-radius: 12px; border: 1px solid #e2e8f0; transition: transform 0.3s, box-shadow 0.3s; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+        .service-card h3 { margin: 1rem 0 0.5rem 0; color: #0f172a; }
+        .service-card p { font-size: 0.95rem; color: #64748b; }
+
+        /* Banner CTA */
+        .cta-banner { background: #0f172a; color: white; text-align: center; padding: 4rem 8%; margin: 3rem 0; }
+        .cta-banner h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .cta-banner p { margin-bottom: 2rem; color: #94a3b8; }
+
+        /* Footer */
+        footer { background: #0284c7; color: white; text-align: center; padding: 2rem; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">👓 Óptica Visión</a>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="https://wa.me/593963218544" target="_blank" class="btn-cita">Agendar Cita</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Tu visión en manos de expertos.</h1>
+            <p>Descubre lentes de contacto, monturas exclusivas y exámenes computarizados con la más alta tecnología para cuidar tu salud visual.</p>
+            <div class="hero-btns">
+                <a href="https://wa.me/593963218544" target="_blank" class="btn-primary">Consultar por WhatsApp</a>
+                <a href="#servicios" class="btn-secondary">Ver Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="servicios">
+        <h2 class="section-title">Nuestros Servicios Especializados</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Examen Visual Computarizado</h3>
+                <p>Diagnóstico preciso de tu agudeza visual con equipos de última generación.</p>
+            </div>
+            <div class="service-card">
+                <h3>Lunas Antirreflejo / Filtro Azul</h3>
+                <p>Protección especial para el uso constante de pantallas y dispositivos digitales.</p>
+            </div>
+            <div class="service-card">
+                <h3>Lentes de Contacto</h3>
+                <p>Adaptación personalizada y marcas líderes para tu comodidad diaria.</p>
+            </div>
+            <div class="service-card">
+                <h3>Asesoría de Imagen Visual</h3>
+                <p>Te ayudamos a elegir la montura que mejor se adapte al tipo y forma de tu rostro.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <h2>¡Pronto agregaremos nuestro catálogo online!</h2>
+        <p>Mientras preparamos los nuevos modelos, solicita asesoría directa por WhatsApp.</p>
+        <a href="https://wa.me/593963218544" target="_blank" class="btn-primary">Escribir a un Asesor</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Óptica Visión. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
