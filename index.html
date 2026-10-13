@@ -83,7 +83,7 @@
             padding: 0 1rem;
         }
 
-        /* Banners Promocionales */
+        /* Galería de Banners Promocionales */
         .promo-gallery {
             display: flex;
             flex-direction: column;
@@ -116,7 +116,7 @@
             color: #0d6efd;
         }
 
-        /* Sección de Ubicación */
+        /* Sección de Ubicación con Mapa y Estilo Moderno */
         .location-section {
             background: #ffffff;
             padding: 2.5rem 2rem;
@@ -129,16 +129,51 @@
             margin-bottom: 1.5rem;
             text-align: center;
         }
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+        }
         .location-details {
             display: flex;
             flex-direction: column;
             gap: 0.8rem;
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto;
+            font-size: 1.05rem;
         }
         .location-details p strong {
             color: #212529;
+        }
+        .map-container {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .btn-map {
+            display: inline-block;
+            background-color: #0d6efd;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: background 0.2s;
+        }
+        .btn-map:hover {
+            background-color: #0b5ed7;
         }
 
         footer {
@@ -154,7 +189,7 @@
 
     <header>
         <div class="logo">
-            <img src="https://raw.githubusercontent.com/goodbotsedn/optica-web/main/logo.png" alt="Óptica Victoria Visión">
+            <img src="logo.png" alt="Óptica Victoria Visión">
         </div>
         <nav>
             <a href="#inicio">Inicio</a>
@@ -201,24 +236,13 @@
             </div>
         </div>
 
-        <!-- Sección de Ubicación en Texto -->
+        <!-- Sección de Ubicación con Google Maps Interactivo -->
         <div class="location-section" id="ubicacion">
-            <h2>📍 Nuestra Ubicación</h2>
-            <div class="location-details">
-                <p><strong>Barrio:</strong> El Rosario</p>
-                <p><strong>Calle Principal:</strong> N61 Av. del Maestro</p>
-                <p><strong>Número:</strong> OE4-359</p>
-                <p><strong>Intersección:</strong> OE4N Río Timbara</p>
-                <p><strong>Referencia:</strong> Junto a CNT (Corporación Nacional de Telecomunicaciones)</p>
-            </div>
-        </div>
-
-    </div>
-
-    <footer id="contacto">
-        <p><strong>Óptica Victoria Visión</strong> - Asesora: Jeanette Fonte</p>
-        <p>Teléfono / WhatsApp: +593 95 860 3767</p>
-    </footer>
-
-</body>
-</html>
+            <h2>📍 Visítanos</h2>
+            <div class="location-grid">
+                <div class="location-details">
+                    <p><strong>Barrio:</strong> El Rosario[cite: 6]</p>
+                    <p><strong>Calle Principal:</strong> N61 Av. del Maestro[cite: 6]</p>
+                    <p><strong>Número:</strong> OE4-359[cite: 6]</p>
+                    <p><strong>Intersección:</strong> OE4N Río Timbara[cite: 6]</p>
+                    <p><strong>Referencia:</strong> Junto al CNT (Corporación Nacional de Telecomunicaciones)
