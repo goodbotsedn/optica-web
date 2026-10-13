@@ -50,7 +50,7 @@
             margin-bottom: 2rem;
         }
         
-        /* Botón de WhatsApp Corporativo Profesional */
+        /* Botón de WhatsApp Corporativo */
         .btn-whatsapp-v1 {
             background-color: #25D366;
             color: #ffffff;
@@ -82,11 +82,28 @@
             margin: 3rem auto;
             padding: 0 1rem;
         }
+
+        /* Banners Promocionales */
+        .promo-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .promo-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
         .services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             text-align: center;
+            margin-bottom: 3rem;
         }
         .card {
             background: white;
@@ -98,6 +115,32 @@
             margin-bottom: 1rem;
             color: #0d6efd;
         }
+
+        /* Sección de Ubicación */
+        .location-section {
+            background: #ffffff;
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            margin-top: 3rem;
+        }
+        .location-section h2 {
+            color: #0d6efd;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .location-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .location-details p strong {
+            color: #212529;
+        }
+
         footer {
             background: #212529;
             color: white;
@@ -111,11 +154,12 @@
 
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Óptica Victoria Visión">
+            <img src="https://raw.githubusercontent.com/goodbotsedn/optica-web/main/logo.png" alt="Óptica Victoria Visión">
         </div>
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
+            <a href="#ubicacion">Ubicación</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
@@ -124,7 +168,6 @@
         <h1>Óptica Victoria Visión</h1>
         <p>Cuidamos tu salud visual con la mejor atención y tecnología.</p>
         
-        <!-- Botón Corporativo de WhatsApp -->
         <a href="https://wa.me/593958603767?text=Hola%20Jeanette,%20quisiera%20agendar%20una%20cita%20o%20más%20información" class="btn-whatsapp-v1" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
@@ -133,8 +176,16 @@
         </a>
     </section>
 
-    <div class="container" id="servicios">
-        <h2 style="text-align: center; margin-bottom: 2rem;">Nuestros Servicios</h2>
+    <div class="container">
+        
+        <!-- Galería de Banners Promocionales -->
+        <div class="promo-gallery">
+            <img src="1000812519.jpg" alt="Modelos Victoria Visión">
+            <img src="1000812518.jpg" alt="Lentes para Niños y Adultos Victoria Visión">
+            <img src="1000812517.jpg" alt="Lentes de Sol Victoria Visión">
+        </div>
+
+        <h2 style="text-align: center; margin-bottom: 2rem;" id="servicios">Nuestros Servicios</h2>
         <div class="services">
             <div class="card">
                 <h3>Examen Visual</h3>
@@ -149,6 +200,19 @@
                 <p>Asesoramiento directo con Jeanette Fonte para encontrar la solución ideal para ti.</p>
             </div>
         </div>
+
+        <!-- Sección de Ubicación en Texto -->
+        <div class="location-section" id="ubicacion">
+            <h2>📍 Nuestra Ubicación</h2>
+            <div class="location-details">
+                <p><strong>Barrio:</strong> El Rosario</p>
+                <p><strong>Calle Principal:</strong> N61 Av. del Maestro</p>
+                <p><strong>Número:</strong> OE4-359</p>
+                <p><strong>Intersección:</strong> OE4N Río Timbara</p>
+                <p><strong>Referencia:</strong> Junto a CNT (Corporación Nacional de Telecomunicaciones)</p>
+            </div>
+        </div>
+
     </div>
 
     <footer id="contacto">
